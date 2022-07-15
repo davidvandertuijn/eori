@@ -38,7 +38,7 @@ class Client extends SoapClient
                 CURLE_OPERATION_TIMEDOUT,
                 CURLE_OPERATION_TIMEOUTED,
             ])) {
-                throw new EoriTimeoutException($error);
+                throw new EcTimeoutException($error);
             } else {
                 throw new SoapFault('Client', $error);
             }
