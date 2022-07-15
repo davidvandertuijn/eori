@@ -2,7 +2,7 @@
 
 namespace Davidvandertuijn\Eori\Ec;
 
-use Davidvandertuijn\Eori\Eori\Exceptions\Timeout as EoriTimeoutException;
+use Davidvandertuijn\Eori\Ec\Exceptions\Timeout as EcTimeoutException;
 use SoapClient;
 use SoapFault;
 
