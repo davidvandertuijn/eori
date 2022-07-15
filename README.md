@@ -4,6 +4,8 @@
 <a href="https://packagist.org/packages/davidvandertuijn/eori"><img src="https://poser.pugx.org/davidvandertuijn/eori/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/eori"><img src="https://poser.pugx.org/davidvandertuijn/eori/license.svg" alt="License"></a>
 
+![Economic Operators Registration and Identification system (EORI) Validator](https://cdn.davidvandertuijn.nl/github/eori.png)
+
 ## Install
 
 ```
