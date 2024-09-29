@@ -6,6 +6,10 @@
 
 ![Economic Operators Registration and Identification system (EORI) Validator](https://cdn.davidvandertuijn.nl/github/eori.png)
 
+The Economic Operators Registration and Identification (EORI) system is a crucial component in international trade, designed to streamline customs processes and enhance the efficiency of cross-border operations. The EORI Validator provides businesses and customs authorities with a reliable tool to verify the validity of EORI numbers assigned to economic operators within the European Union.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/davidvandertuijn)
+
 ## Install
 
 ```
