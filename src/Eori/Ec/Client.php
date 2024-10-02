@@ -10,13 +10,8 @@ class Client extends SoapClient
 {
     /**
      * Do Request.
-     * @param string $request The XML SOAP request.
-     * @param string $location The URL to request.
-     * @param string $action The SOAP action.
-     * @param int $version The SOAP version.
-     * @param int  $one_way If one_way is set to 1, this method returns nothing. Use this where a response is not expected.
      */
-    public function __doRequest($request, $location, $action, $version, $one_way = null)
+    public function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false): ?string
     {
         $ch = curl_init($location);
 
@@ -46,8 +41,10 @@ class Client extends SoapClient
 
         curl_close($ch);
 
-        if (!$one_way) {
-            return $response;
+        if ($oneWay) {
+            return null;
         }
+
+        return $response;
     }
 }

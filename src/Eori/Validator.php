@@ -6,14 +6,13 @@ use Exception;
 use Davidvandertuijn\Eori\Ec\Client as EcClient;
 use Davidvandertuijn\Eori\Ec\Exceptions\Timeout as EcTimeoutException;
 use SoapFault;
-use stdClass;
 
 class Validator
 {
     /**
      * @const WSDL_URL
      */
-    const WSDL_URL = 'https://ec.europa.eu/taxation_customs/dds2/eos/validation/services/validation?wsdl';
+    public const WSDL_URL = 'https://ec.europa.eu/taxation_customs/dds2/eos/validation/services/validation?wsdl';
 
     /**
      * @var EcClient
@@ -48,7 +47,6 @@ class Validator
 
     /**
      * Get Ec Client.
-     * @return EcClient
      */
     private function getEcClient(): EcClient
     {
@@ -57,7 +55,6 @@ class Validator
 
     /**
      * Set Ec Client.
-     * @param EcClient
      */
     private function setEcClient(EcClient $ecClient): void
     {
@@ -66,7 +63,6 @@ class Validator
 
     /**
      * Get Valid.
-     * @return bool
      */
     private function getValid(): bool
     {
@@ -75,7 +71,6 @@ class Validator
 
     /**
      * Set Valid.
-     * @param string
      */
     private function setValid(bool $valid): void
     {
@@ -84,7 +79,6 @@ class Validator
 
     /**
      * Get Strict.
-     * @return bool
      */
     public function getStrict(): bool
     {
@@ -93,7 +87,6 @@ class Validator
 
     /**
      * Set Strict.
-     * @param bool
      */
     public function setStrict(bool $strict): void
     {
@@ -102,7 +95,6 @@ class Validator
 
     /**
      * Is Valid.
-     * @return bool
      */
     public function isValid(): bool
     {
@@ -111,8 +103,6 @@ class Validator
 
     /**
      * Validate.
-     * @param string $eoriNumber
-     * @return bool
      */
     public function validate(string $eoriNumber): bool
     {
@@ -131,7 +121,7 @@ class Validator
             $this->setValid(true);
             return true;
         } catch (EcTimeoutException $e) {
-            if ($this->getStrict() == false) {
+            if (!$this->getStrict()) {
                 $this->setValid(true);
                 return true;
             }

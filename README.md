@@ -12,7 +12,7 @@ The Economic Operators Registration and Identification (EORI) system is a crucia
 
 ## Install
 
-```
+```shell
 composer require davidvandertuijn/eori
 ```
 
