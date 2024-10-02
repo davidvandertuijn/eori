@@ -34,14 +34,14 @@ if ($eori->isValid()) {
 }
 ```
 
-## Strict (optional)
+## Strict
 
-When strict is set to **false**, the EORI number validation returns **true** if the SOAP service is not available (CURL timeout or SoapFault).
+In this EORI Validation library, when strict mode is set to FALSE, the validation process is more flexible, especially in scenarios where the SOAP service is temporarily unavailable. In such cases, the validation will return TRUE, allowing the workflow to continue without disruption due to service timeouts or SOAP errors.
 
 ```php
 $eori->setStrict(false); // default = true
 ```
 
-## Comments
+## Cache
 
-We suggest that you cache the valid EORI numbers in your application to prevent multiple requests to the SOAP service.
+To optimize the validation process and reduce the dependency on the SOAP service, we recommend caching valid EORI numbers within your application. This approach minimizes repeated requests to the SOAP service and improves overall performance.
